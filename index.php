@@ -6,6 +6,23 @@
     <title>Vulindlela Tech Hub | Empowering Nonprofits Through Technology</title>
     <meta name="description" content="Vulindlela Tech Hub empowers Non-Profit Organisations (NPOs) and ECD Centres with technology, administrative support, and compliance solutions for sustainable growth.">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/Vulindlela-icon.png">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vulindlelaimpact.org.za/">
+    <meta property="og:title" content="Vulindlela Tech Hub | Empowering Nonprofits">
+    <meta property="og:description" content="We open the way for NPOs and ECD Centres to grow through technology, compliance, and admin support.">
+    <meta property="og:image" content="https://www.vulindlelaimpact.org.za/assets/Vulindlela-icon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.vulindlelaimpact.org.za/">
+    <meta property="twitter:title" content="Vulindlela Tech Hub | Empowering Nonprofits">
+    <meta property="twitter:description" content="We open the way for NPOs and ECD Centres to grow through technology, compliance, and admin support.">
+    <meta property="twitter:image" content="https://www.vulindlelaimpact.org.za/assets/Vulindlela-icon.png">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +43,9 @@
                     },
                     colors: {
                         brand: {
-                            teal: '#0F766E',
-                            orange: '#F97316',
-                            dark: '#0f172a',
+                            gold: '#D4AF37', // Premium Gold
+                            black: '#0f172a', // Rich Black/Slate-900 for better text contrast than pure black
+                            dark: '#000000', // Pure Black for backgrounds
                             light: '#f8fafc',
                         }
                     }
@@ -43,7 +60,10 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         .hero-gradient {
-            background: linear-gradient(135deg, #0F766E 0%, #0d9488 50%, #F97316 100%);
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #D4AF37 100%);
+        }
+        .text-gold {
+            color: #D4AF37;
         }
     </style>
 </head>
@@ -55,21 +75,20 @@
             <div class="flex justify-between h-20 items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="assets/logo.png" alt="Vulindlela Tech Hub" class="h-12 w-auto">
-                    <span class="font-heading font-bold text-xl text-brand-teal hidden sm:block">Vulindlela Tech Hub</span>
+                    <img src="assets/vulindlela-web-logo.png" alt="Vulindlela Tech Hub" class="h-16 w-auto">
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-slate-600 hover:text-brand-teal font-medium transition">About</a>
-                    <a href="#services" class="text-slate-600 hover:text-brand-teal font-medium transition">Services</a>
-                    <a href="#approach" class="text-slate-600 hover:text-brand-teal font-medium transition">Approach</a>
-                    <a href="#contact" class="px-5 py-2.5 bg-brand-orange text-white rounded-full font-medium hover:bg-orange-600 transition shadow-lg shadow-orange-200">Contact Us</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-gold font-medium transition">About</a>
+                    <a href="#services" class="text-slate-600 hover:text-brand-gold font-medium transition">Services</a>
+                    <a href="#approach" class="text-slate-600 hover:text-brand-gold font-medium transition">Approach</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-brand-gold text-white rounded-full font-medium hover:bg-yellow-600 transition shadow-lg shadow-yellow-200">Contact Us</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 hover:text-brand-teal focus:outline-none">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 hover:text-brand-gold focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" x-show="!mobileMenuOpen"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" x-show="mobileMenuOpen" x-cloak/>
@@ -82,10 +101,10 @@
         <!-- Mobile Menu -->
         <div x-show="mobileMenuOpen" x-collapse class="md:hidden bg-white border-t border-gray-100 shadow-xl absolute w-full rounded-b-2xl">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#about" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-teal hover:bg-gray-50">About</a>
-                <a href="#services" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-teal hover:bg-gray-50">Services</a>
-                <a href="#approach" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-teal hover:bg-gray-50">Approach</a>
-                <a href="#contact" @click="mobileMenuOpen = false" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-medium bg-brand-orange text-white hover:bg-orange-600">Contact Us</a>
+                <a href="#about" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-gold hover:bg-gray-50">About</a>
+                <a href="#services" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-gold hover:bg-gray-50">Services</a>
+                <a href="#approach" @click="mobileMenuOpen = false" class="block px-3 py-3 rounded-lg text-base font-medium text-slate-600 hover:text-brand-gold hover:bg-gray-50">Approach</a>
+                <a href="#contact" @click="mobileMenuOpen = false" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-medium bg-brand-gold text-white hover:bg-yellow-600">Contact Us</a>
             </div>
         </div>
     </nav>
@@ -101,14 +120,14 @@
             <h1 class="text-4xl md:text-6xl font-heading font-extrabold tracking-tight mb-6 leading-tight">
                 Empowering Nonprofits Through <br class="hidden md:block"/> Technology, Systems & Support
             </h1>
-            <p class="text-lg md:text-xl text-teal-50 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+            <p class="text-lg md:text-xl text-yellow-50 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
                 We open the way for social impact organisations to operate efficiently, remain compliant, secure funding, and focus on serving their communities.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="px-8 py-4 bg-white text-brand-teal font-bold rounded-full hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1">
+                <a href="#services" class="px-8 py-4 bg-white text-brand-black font-bold rounded-full hover:bg-gray-100 transition shadow-xl transform hover:-translate-y-1">
                     Explore Our Services
                 </a>
-                <a href="#contact" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-teal transition transform hover:-translate-y-1">
+                <a href="#contact" class="px-8 py-4 bg-transparent border-2 border-brand-gold text-brand-gold font-bold rounded-full hover:bg-brand-gold hover:text-white transition transform hover:-translate-y-1">
                     Get In Touch
                 </a>
             </div>
@@ -119,7 +138,7 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-brand-orange font-bold tracking-wide uppercase text-sm mb-2">Why We Exist</h2>
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Why We Exist</h2>
                 <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">Overcoming Barriers to Impact</h3>
                 <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Many nonprofits and ECD centres struggle with challenges that hinder their growth. We exist to remove these barriers.</p>
             </div>
@@ -127,8 +146,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-teal transition-colors">
-                        <svg class="w-6 h-6 text-brand-teal group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors">
+                        <svg class="w-6 h-6 text-brand-black group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">Limited Technology Access</h4>
                     <p class="text-slate-600 leading-relaxed">Bridging the digital divide with affordable and practical tech solutions.</p>
@@ -136,8 +155,8 @@
                 
                 <!-- Card 2 -->
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-teal transition-colors">
-                        <svg class="w-6 h-6 text-brand-teal group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors">
+                        <svg class="w-6 h-6 text-brand-black group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">Compliance Challenges</h4>
                     <p class="text-slate-600 leading-relaxed">Navigating SARS, CIPC, and NPO Directorate requirements with ease.</p>
@@ -145,8 +164,8 @@
 
                 <!-- Card 3 -->
                 <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition group">
-                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-teal transition-colors">
-                        <svg class="w-6 h-6 text-brand-teal group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-gold transition-colors">
+                        <svg class="w-6 h-6 text-brand-black group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">Funding Difficulty</h4>
                     <p class="text-slate-600 leading-relaxed">Unlocking opportunities with proposal writing and donor compliance support.</p>
@@ -172,50 +191,50 @@
     <section id="services" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-brand-orange font-bold tracking-wide uppercase text-sm mb-2">What We Do</h2>
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">What We Do</h2>
                 <h3 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">Comprehensive Support Services</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Tech Service -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-teal transition duration-300">
-                    <h4 class="text-2xl font-bold text-brand-teal mb-4">Technology Solutions</h4>
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-gold transition duration-300">
+                    <h4 class="text-2xl font-bold text-brand-black mb-4">Technology Solutions</h4>
                     <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Website design and hosting</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Email setup and digital presence</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Productivity & management systems</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Data and reporting systems</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Website design and hosting</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Email setup and digital presence</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Productivity & management systems</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Data and reporting systems</li>
                     </ul>
                 </div>
 
                 <!-- Admin Service -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-teal transition duration-300">
-                    <h4 class="text-2xl font-bold text-brand-teal mb-4">Administration & Compliance</h4>
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-gold transition duration-300">
+                    <h4 class="text-2xl font-bold text-brand-black mb-4">Administration & Compliance</h4>
                     <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> NPO registration support</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> CIPC and NPO Directorate compliance</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> SARS registration & tax compliance</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Governance documentation</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> NPO registration support</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> CIPC and NPO Directorate compliance</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> SARS registration & tax compliance</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Governance documentation</li>
                     </ul>
                 </div>
 
                 <!-- Funding Service -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-teal transition duration-300">
-                    <h4 class="text-2xl font-bold text-brand-teal mb-4">Funding & Sustainability</h4>
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-gold transition duration-300">
+                    <h4 class="text-2xl font-bold text-brand-black mb-4">Funding & Sustainability</h4>
                     <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Funding and sponsorship applications</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Proposal writing support</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Donor compliance preparation</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Funding and sponsorship applications</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Proposal writing support</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Donor compliance preparation</li>
                     </ul>
                 </div>
 
                 <!-- Training Service -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-teal transition duration-300">
-                    <h4 class="text-2xl font-bold text-brand-teal mb-4">Training & Capacity Building</h4>
+                <div class="bg-white p-8 rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-brand-gold transition duration-300">
+                    <h4 class="text-2xl font-bold text-brand-black mb-4">Training & Capacity Building</h4>
                     <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Digital skills training</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> System usage and adoption</li>
-                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Admin and compliance training</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Digital skills training</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> System usage and adoption</li>
+                        <li class="flex items-center gap-3"><svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Admin and compliance training</li>
                     </ul>
                 </div>
             </div>
@@ -223,26 +242,26 @@
     </section>
 
     <!-- Value Prop -->
-    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-brand-teal opacity-10 skew-x-12 translate-x-20"></div>
+    <section class="py-20 bg-brand-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-800 opacity-20 skew-x-12 translate-x-20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">We handle the systems — you focus on impact.</h2>
-            <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-10">We become the backbone support for nonprofits, offering affordable, tailored, and purpose-driven solutions.</p>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">We become the backbone support for nonprofits, offering affordable, tailored, and purpose-driven solutions.</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">Affordable</div>
+                    <div class="text-3xl font-bold text-brand-gold mb-2">Affordable</div>
                     <div class="text-sm text-slate-400">Tailored Solutions</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">One-Stop</div>
+                    <div class="text-3xl font-bold text-brand-gold mb-2">One-Stop</div>
                     <div class="text-sm text-slate-400">Tech & Admin Hub</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">Practical</div>
+                    <div class="text-3xl font-bold text-brand-gold mb-2">Practical</div>
                     <div class="text-sm text-slate-400">Hands-on Implementation</div>
                 </div>
                 <div class="text-center">
-                    <div class="text-3xl font-bold text-brand-orange mb-2">Driven</div>
+                    <div class="text-3xl font-bold text-brand-gold mb-2">Driven</div>
                     <div class="text-sm text-slate-400">By Purpose</div>
                 </div>
             </div>
@@ -254,14 +273,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
                 <div>
-                    <h3 class="text-sm font-bold text-brand-orange tracking-widest uppercase mb-2">Our Mission</h3>
+                    <h3 class="text-sm font-bold text-brand-gold tracking-widest uppercase mb-2">Our Mission</h3>
                     <h2 class="text-3xl font-heading font-bold text-slate-900 mb-6">Enabling Sustainable Growth</h2>
                     <p class="text-lg text-slate-600 leading-relaxed">
                         To empower nonprofit organisations and ECD centres with technology, administrative systems, and compliance support that enable sustainable growth, effective governance, and meaningful community impact.
                     </p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-brand-teal">
-                    <h3 class="text-sm font-bold text-brand-teal tracking-widest uppercase mb-2">Our Vision</h3>
+                <div class="bg-slate-50 p-8 rounded-2xl border-l-4 border-brand-black">
+                    <h3 class="text-sm font-bold text-brand-black tracking-widest uppercase mb-2">Our Vision</h3>
                     <p class="text-xl font-medium text-slate-800 italic">
                         "A thriving nonprofit ecosystem where every organisation has access to the tools, systems, and support needed to fulfil its purpose and create lasting change."
                     </p>
@@ -271,27 +290,27 @@
             <h3 class="text-center text-2xl font-bold text-slate-900 mb-10">Our Core Values</h3>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Empowerment</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Empowerment</h4>
                     <p class="text-sm text-slate-600">We equip organisations to operate independently and confidently.</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Service with Purpose</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Service with Purpose</h4>
                     <p class="text-sm text-slate-600">We serve with humility, integrity, and a heart for impact.</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Integrity</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Integrity</h4>
                     <p class="text-sm text-slate-600">We uphold transparency, accountability, and ethical conduct.</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Excellence</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Excellence</h4>
                     <p class="text-sm text-slate-600">We deliver high-quality, reliable, and professional support.</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Innovation</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Innovation</h4>
                     <p class="text-sm text-slate-600">We use smart, practical technology to solve real challenges.</p>
                 </div>
                 <div class="p-6 bg-slate-50 rounded-xl hover:shadow-md transition">
-                    <h4 class="font-bold text-brand-teal mb-2">Collaboration</h4>
+                    <h4 class="font-bold text-brand-black mb-2">Collaboration</h4>
                     <p class="text-sm text-slate-600">We believe impact is greater when we work together.</p>
                 </div>
             </div>
@@ -304,25 +323,25 @@
             <h2 class="text-3xl font-heading font-bold text-slate-900 mb-12">Our Approach</h2>
             <div class="flex flex-wrap justify-center items-center gap-8">
                 <div class="flex flex-col items-center max-w-[200px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-orange border-2 border-brand-orange">1</div>
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-gold border-2 border-brand-gold">1</div>
                     <h4 class="font-bold text-slate-900">Assess</h4>
                     <p class="text-sm text-slate-500">Understand your organisation’s needs</p>
                 </div>
                 <div class="hidden md:block w-12 h-1 bg-slate-300"></div>
                 <div class="flex flex-col items-center max-w-[200px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-orange border-2 border-brand-orange">2</div>
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-gold border-2 border-brand-gold">2</div>
                     <h4 class="font-bold text-slate-900">Design</h4>
                     <p class="text-sm text-slate-500">Tailor systems and solutions</p>
                 </div>
                 <div class="hidden md:block w-12 h-1 bg-slate-300"></div>
                 <div class="flex flex-col items-center max-w-[200px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-orange border-2 border-brand-orange">3</div>
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-gold border-2 border-brand-gold">3</div>
                     <h4 class="font-bold text-slate-900">Implement</h4>
                     <p class="text-sm text-slate-500">Set up tools, systems, and compliance</p>
                 </div>
                 <div class="hidden md:block w-12 h-1 bg-slate-300"></div>
                 <div class="flex flex-col items-center max-w-[200px]">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-orange border-2 border-brand-orange">4</div>
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md mb-4 font-bold text-xl text-brand-gold border-2 border-brand-gold">4</div>
                     <h4 class="font-bold text-slate-900">Support</h4>
                     <p class="text-sm text-slate-500">Ongoing guidance and improvement</p>
                 </div>
@@ -333,51 +352,114 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-brand-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-                <div class="p-10 md:w-1/2 bg-brand-teal text-white">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Get In Touch</h2>
-                    <p class="text-teal-100 mb-8">Ready to open the way for your organisation? Contact us today.</p>
+            <div class="bg-brand-black rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="p-10 md:w-1/2 bg-brand-black text-white border-r border-gray-800">
+                    <h2 class="text-3xl font-heading font-bold mb-6 text-brand-gold">Get In Touch</h2>
+                    <p class="text-gray-300 mb-8">Ready to open the way for your organisation? Contact us today.</p>
                     
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-teal-200 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <svg class="w-6 h-6 text-brand-gold mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                             <div>
                                 <h4 class="font-bold">Location</h4>
-                                <p class="text-sm text-teal-100">South Africa</p>
+                                <p class="text-sm text-gray-300">South Africa</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-teal-200 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-6 h-6 text-brand-gold mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <div>
                                 <h4 class="font-bold">Email</h4>
-                                <a href="mailto:info@vulindlelaimpact.org.za" class="text-sm text-teal-100 hover:text-white underline">info@vulindlelaimpact.org.za</a>
+                                <a href="mailto:info@vulindlelahub.org.za" class="text-sm text-gray-300 hover:text-brand-gold underline">info@vulindlelahub.org.za</a>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <svg class="w-6 h-6 text-teal-200 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            <svg class="w-6 h-6 text-brand-gold mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <a href="tel:+27621553817" class="text-sm text-gray-300 hover:text-brand-gold underline">062 155 3817</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-brand-gold mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
                             <div>
                                 <h4 class="font-bold">Website</h4>
-                                <a href="https://www.vulindlelaimpact.org.za" class="text-sm text-teal-100 hover:text-white underline">www.vulindlelaimpact.org.za</a>
+                                <a href="https://www.vulindlelahub.org.za" class="text-sm text-gray-300 hover:text-brand-gold underline">www.vulindlelahub.org.za</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="p-10 md:w-1/2 bg-white">
-                    <form class="space-y-4" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! This is a demo form.');">
+                <div class="p-10 md:w-1/2 bg-white" x-data="{ 
+                    name: '', 
+                    phone: '', 
+                    email: '', 
+                    area: '', 
+                    services: [],
+                    submitForm() {
+                        let text = 'Hi Vulindlela Tech Hub, I would like to enquire.%0A%0A';
+                        text += '*Name:* ' + this.name + '%0A';
+                        text += '*Phone:* ' + this.phone + '%0A';
+                        text += '*Email:* ' + this.email + '%0A';
+                        text += '*Area/Town:* ' + this.area + '%0A';
+                        text += '*Interested Services:* ' + (this.services.length > 0 ? this.services.join(', ') : 'General Enquiry') + '%0A';
+                        
+                        window.open('https://wa.me/27621553817?text=' + text, '_blank');
+                    } 
+                }">
+                    <form class="space-y-4" @submit.prevent="submitForm">
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Name</label>
-                            <input type="text" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent outline-none transition" placeholder="Your Name">
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Full Name</label>
+                            <input type="text" x-model="name" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition" placeholder="Your Name">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">Contact Number</label>
+                                <input type="tel" x-model="phone" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition" placeholder="082 123 4567">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">Email Address</label>
+                                <input type="email" x-model="email" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition" placeholder="name@example.com">
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
-                            <input type="email" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent outline-none transition" placeholder="name@example.com">
+                            <label class="block text-sm font-bold text-slate-700 mb-1">Area / Town</label>
+                            <input type="text" x-model="area" required class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition" placeholder="e.g. Durban, Umlazi">
                         </div>
+                        
                         <div>
-                            <label class="block text-sm font-medium text-slate-700 mb-1">Message</label>
-                            <textarea rows="3" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-teal focus:border-transparent outline-none transition" placeholder="How can we help?"></textarea>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">Services Interested In:</label>
+                            <DIV class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="Website Design" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">Website Design</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="NPO Registration" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">NPO Registration</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="Compliance Support" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">Compliance Support</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="Funding Applications" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">Funding Applications</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="Training" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">Training</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" value="Other" x-model="services" class="rounded text-brand-gold focus:ring-brand-gold">
+                                    <span class="text-slate-600">Other</span>
+                                </label>
+                            </DIV>
                         </div>
-                        <button type="submit" class="w-full py-3 bg-brand-orange text-white font-bold rounded-lg hover:bg-orange-600 transition shadow-lg">Send Message</button>
+
+                        <button type="submit" class="w-full py-3 bg-brand-gold text-white font-bold rounded-lg hover:bg-yellow-600 transition shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.506-.669-.516l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            Submit via WhatsApp
+                        </button>
                     </form>
                 </div>
             </div>
